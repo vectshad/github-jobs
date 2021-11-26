@@ -6,6 +6,24 @@ import { Navbar, Container } from 'react-bootstrap';
 import JobList from './components/jobList';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      jobList: []
+    }
+  }
+
+  async componentDidMount() {
+    const result = await fetch("http://localhost:5000/");
+    const jobs = await result.json()
+    this.setState({
+      jobList: jobs
+    });
+    // console.log(this.state.jobList)
+  }
+  
+
   render() {
     return (
       <div>
@@ -15,7 +33,7 @@ class App extends Component {
           </Container>
         </Navbar>
         <Search/>
-        <JobList/>
+        <JobList jobs={this.state.jobList}/>
       </div>
     );
   }
