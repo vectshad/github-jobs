@@ -1,0 +1,9 @@
+.job-list {
+    width: 70%;
+    height: 700px;
+    margin: auto;
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 2px;
+}
