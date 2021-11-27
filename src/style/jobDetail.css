@@ -1,0 +1,36 @@
+.job-detail {
+    width: 70%;
+    height: 100%;
+    margin: 100px auto;
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 2px;
+}
+
+p {
+    color: black;
+}
+
+.light {
+    color: rgb(158, 158, 158);
+}
+
+.apply {
+    background-color: #fffef1;
+    padding: 1%;
+    width: 90%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 5%;
+    border: 1px solid rgb(189, 189, 189);
+}
+
+.company {
+    padding: 1%;
+    width: 90%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 5%;
+    border: 1px solid rgb(189, 189, 189);
+}
