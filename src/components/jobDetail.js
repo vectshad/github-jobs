@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { Link } from 'react-router-dom';
 import '../style/jobDetail.css';
 
 function JobDetail() {
@@ -22,6 +25,11 @@ function JobDetail() {
                     <Navbar.Brand href='/'><b>GitHub</b> Jobs</Navbar.Brand>
                 </Container>
             </Navbar>
+            <div className='back'>
+            <Button component={Link} to='/'color='primary' size='large' startIcon={<ArrowBackIcon />}>
+                back
+            </Button>   
+            </div>
             <div className='job-detail'>
                 <p className='light'>{state.type} / {state.location}</p>
                 <h2>{state.title}</h2>
