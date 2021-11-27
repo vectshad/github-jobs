@@ -26,7 +26,7 @@ class JobList extends Component {
                     { return ([
                     <div className='list'>
                         <div className="left">
-                            <a href="/">{job.title}</a>
+                            <a href="/detail">{job.title}</a>
                             <p>{job.company}</p>
                         </div>
                         <div className="right">
