@@ -24,9 +24,9 @@ class JobList extends Component {
         return (
             <div className='job-list'>
                 <h2>Job List</h2>
-                {this.state.jobs.map((job, id) => 
+                {this.state.jobs.map((job) => 
                     { return ([
-                    <div className='list'>
+                    <div key ={job.id} className='list'>
                         <div className='left'>
                             <Link to={`/detail/${job.id}`}>{job.title}</Link>
                             <p>{job.company}</p>
