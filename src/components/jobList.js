@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import '../style/jobList.css'
 
 class JobList extends Component {
@@ -20,16 +22,16 @@ class JobList extends Component {
     }
     render () {
         return (
-            <div className="job-list">
+            <div className='job-list'>
                 <h2>Job List</h2>
                 {this.state.jobs.map((job, id) => 
                     { return ([
                     <div className='list'>
-                        <div className="left">
-                            <a href="/detail">{job.title}</a>
+                        <div className='left'>
+                            <Link to={`/detail/${job.id}`}>{job.title}</Link>
                             <p>{job.company}</p>
                         </div>
-                        <div className="right">
+                        <div className='right'>
                             {job.location}
                             <p>{job.created_at}</p>
                         </div>
