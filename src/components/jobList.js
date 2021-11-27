@@ -13,7 +13,7 @@ class JobList extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.jobs != this.props.jobs) {
+        if (prevProps.jobs !== this.props.jobs) {
             console.log(this.props.jobs)
             this.setState({
                 jobs: this.props.jobs
